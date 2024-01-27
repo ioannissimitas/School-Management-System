@@ -2,6 +2,7 @@ import pymongo
 
 class Students:
     def __init__(self, name, age, pn, email, fathers_name, amka):
+        self.connect_to_database = pymongo.MongoClient('mongodb://localhost:27017/')
         self.name = name
         self.age = age
         self.pn = pn
@@ -11,8 +12,7 @@ class Students:
         self.amka = amka
 
     def create_student(self):
-        connect_to_database = pymongo.MongoClient('mongodb://localhost:27017/')
-        db = connect_to_database['school']
+        db = self.connect_to_database['school']
         data = db['students']
 
 
@@ -28,3 +28,6 @@ class Students:
 
 
         save_to_database = data.insert_one(student_data)
+
+def read_student_data(self):
+    pass
