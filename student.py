@@ -22,7 +22,7 @@ class Students:
             'Students Name': self.name,
             'Students Age': self.age,
             'Students Phone Number': self.pn,
-            'Students Email': self.email,
+            'Students E-mail': self.email,
             'Students Fathers Name': self.fathers_name,
             'Students AMKA': self.amka
 
@@ -32,4 +32,4 @@ class Students:
         save_to_database = data.insert_one(student_data)
 
     def read_student_data(self):
-        db.students.find()
+        data.find()
