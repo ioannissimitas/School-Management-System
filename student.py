@@ -28,8 +28,17 @@ class Students:
 
         }
 
-
         save_to_database = data.insert_one(student_data)
 
-    def read_student_data(self):
-        data.find()
+class Create_Student(Students):
+    def __init__(self):
+        super()
+
+    def input_students(self):
+
+        name = input('Add students name: ')
+        age = int(input('Add students age: '))
+        pn = int(input('Add students phone number: '))
+        e_mail = input('Add students e-mail: ')
+        fa_n = input('Add students e-mail: ')
+        amka = int(input('Add students amka: '))
